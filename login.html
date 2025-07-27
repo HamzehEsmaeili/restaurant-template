@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="assets/dist/output.css" rel="stylesheet" />
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.png"
+      type="image/png"
+    />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Title -->
+    <title>Restaurant | Login</title>
+  </head>
+  <body>
+    <main class="flex min-h-screen">
+      <!-- Left Side (Form) -->
+      <div
+        class="flex flex-col w-full items-center justify-center px-16 md:w-1/2"
+      >
+        <!-- Content Container -->
+        <div class="w-full max-w-md">
+          <div class="mb-8">
+            <div class="text-3xl font-bold text-gray-900">Login</div>
+            <p class="text-sm mt-2 text-gray-600">
+              Don't have an account?
+              <a href="signup.html" class="text-blue-600 font-medium"
+                >Sign up</a
+              >
+            </p>
+          </div>
+          <!-- Form Container -->
+          <form class="space-y-8">
+            <div>
+              <label for="email" class="text-sm font-medium text-gray-700"
+                >Email address</label
+              >
+              <input
+                type="email"
+                placeholder="hamzehesmaeili.official@gmail.com"
+                required
+                id="email"
+                class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm outline-orange-500 hover:border-orange-500"
+              />
+            </div>
+            <div>
+              <label for="password" class="text-sm font-medium text-gray-700"
+                >Password</label
+              >
+              <input
+                type="password"
+                minlength="8"
+                maxlength="20"
+                required
+                id="password"
+                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm outline-orange-500 hover:border-orange-500"
+              />
+            </div>
+            <div
+              class="flex items-center justify-between text-sm font-poppins text-gray-600"
+            >
+              <label class="flex items-center space-x-2 cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="remember"
+                  class="h-4 w-4 accent-orange-500 cursor-pointer"
+                />
+                <span class="text-sm text-gray-600">Remember me</span>
+              </label>
+              <a href="#" class="text-sm text-gray-500 hover:underline"
+                >Forget Password?</a
+              >
+            </div>
+            <button
+              type="submit"
+              class="w-full py-4 bg-orange-500 text-white font-poppins rounded-md transition duration-200 hover:bg-orange-600"
+            >
+              Sign up
+            </button>
+            <div class="mt-4">
+              <button
+                class="flex w-full items-center justify-center border border-gray-300 py-4 space-x-2 font-poppins rounded-md transition hover:bg-gray-50"
+              >
+                <img
+                  src="assets/images/google-icon.png"
+                  alt="Google"
+                  class="h-5 w-5 mr-2"
+                />
+                <span>Sign up with Google</span>
+              </button>
+            </div>
+          </form>
+          <p class="text-xs text-gray-400 mt-16 text-center">
+            Copyright © 2025 Delizioso
+          </p>
+        </div>
+      </div>
+      <!-- Right Side Image Container -->
+      <div class="hidden mx-auto md:block md:w-1/2">
+        <!-- Image -->
+        <img
+          src="assets/images/login.png"
+          alt="pancakes"
+          class="object-cover w-full h-full"
+        />
+      </div>
+    </main>
+  </body>
+</html>

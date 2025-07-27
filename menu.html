@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="assets/dist/output.css" rel="stylesheet" />
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.png"
+      type="image/png"
+    />
+    <!-- Font Awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Title -->
+    <title>Restaurant | Menu</title>
+  </head>
+  <body class="font-poppins">
+    <!-- Nav Wrapper -->
+    <nav id="nav-bar" class="sticky top-0 z-50 bg-white shadow-sm">
+      <div
+        class="flex max-w-7xl items-center justify-between mx-auto px-4 py-4"
+      >
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-1 md:gap-2">
+          <span
+            class="bg-orange-500 text-white font-bold rounded-full px-3 py-1 text-lg"
+            >D</span
+          >
+          <span class="font-bold text-xl text-primary md:text-2xl">
+            Delizi<span class="text-orange-500">oso</span>
+          </span>
+        </a>
+        <!-- Mobile Actions (Cart + Hamburger) -->
+        <div class="flex items-center space-x-4 md:hidden">
+          <img src="assets/images/cart.png" alt="cart" class="h-6 w-6" />
+
+          <!-- Hamburger Button -->
+          <button
+            id="menu-btn"
+            class="block hamburger mt-2.5 lg:hidden focus:outline-none"
+            type="button"
+          >
+            <span class="hamburger-top"></span>
+            <span class="hamburger-middle"></span>
+            <span class="hamburger-bottom"></span>
+          </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div
+          id="menu"
+          class="absolute hidden left-0 right-0 top-16 z-[100] bg-white/90 backdrop-blur-sm h-screen w-full overflow-y-auto transition-all duration-500 ease-in-out shadow-lg"
+        >
+          <div class="container mx-auto px-4 py-8">
+            <div
+              class="flex flex-col items-center justify-center w-full space-y-4 font-bold"
+            >
+              <!-- Main Navigation Links -->
+              <a
+                href="index.html"
+                class="group relative w-full max-w-xs text-center transition duration-300 py-3 px-4 hover:bg-orange-50 rounded-lg"
+              >
+                <span
+                  class="text-gray-800 group-hover:text-orange-500 transition-colors duration-300 text-lg"
+                  >Home</span
+                >
+                <span
+                  class="absolute left-1/2 -translate-x-1/2 bottom-1.5 w-0 h-1 bg-orange-500 rounded-full transition-all duration-500 group-hover:w-3/4"
+                ></span>
+              </a>
+
+              <a
+                href="menu.html"
+                class="group relative w-full max-w-xs text-center transition duration-300 py-3 px-4 hover:bg-orange-50 rounded-lg"
+              >
+                <span
+                  class="text-gray-800 group-hover:text-orange-500 transition-colors duration-300 text-lg"
+                  >Menu</span
+                >
+                <span
+                  class="absolute left-1/2 -translate-x-1/2 bottom-1.5 w-0 h-1 bg-orange-500 rounded-full transition-all duration-500 group-hover:w-3/4"
+                ></span>
+              </a>
+
+              <a
+                href="about-us.html"
+                class="group relative w-full max-w-xs text-center transition duration-300 py-3 px-4 hover:bg-orange-50 rounded-lg"
+              >
+                <span
+                  class="text-gray-800 group-hover:text-orange-500 transition-colors duration-300 text-lg"
+                  >About Us</span
+                >
+                <span
+                  class="absolute left-1/2 -translate-x-1/2 bottom-1.5 w-0 h-1 bg-orange-500 rounded-full transition-all duration-500 group-hover:w-3/4"
+                ></span>
+              </a>
+
+              <a
+                href="contact-us.html"
+                class="group relative w-full max-w-xs text-center transition duration-300 py-3 px-4 hover:bg-orange-50 rounded-lg"
+              >
+                <span
+                  class="text-gray-800 group-hover:text-orange-500 transition-colors duration-300 text-lg"
+                  >Contact Us</span
+                >
+                <span
+                  class="absolute left-1/2 -translate-x-1/2 bottom-1.5 w-0 h-1 bg-orange-500 rounded-full transition-all duration-500 group-hover:w-3/4"
+                ></span>
+              </a>
+
+              <!-- Divider with better styling -->
+              <div class="w-full max-w-xs py-2">
+                <div class="border-t border-gray-200 my-2"></div>
+              </div>
+
+              <!-- Auth Links -->
+              <a
+                href="signup.html"
+                class="group relative w-full max-w-xs text-center transition duration-300 py-3 px-4 hover:bg-orange-50 rounded-lg"
+              >
+                <span
+                  class="text-gray-800 group-hover:text-orange-500 transition-colors duration-300 text-lg"
+                  >Sign Up</span
+                >
+                <span
+                  class="absolute left-1/2 -translate-x-1/2 bottom-1.5 w-0 h-1 bg-orange-500 rounded-full transition-all duration-500 group-hover:w-3/4"
+                ></span>
+              </a>
+
+              <a
+                href="login.html"
+                class="group relative w-full max-w-xs text-center transition duration-300 py-3 px-4 bg-orange-500 text-white hover:bg-orange-600 rounded-lg shadow-md hover:shadow-orange-200"
+              >
+                <span
+                  class="text-white group-hover:text-white transition-colors duration-300 text-lg"
+                  >Login</span
+                >
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Desktop Menu -->
+        <div
+          class="hidden items-center text-primary space-x-3 lg:space-x-6 md:flex"
+        >
+          <a href="index.html" class="hover:text-orange-500 transition">Home</a>
+          <a href="menu.html" class="text-orange-500">Menu</a>
+          <a href="about-us.html" class="hover:text-orange-500 transition"
+            >About us</a
+          >
+          <a href="contact-us.html" class="hover:text-orange-500 transition"
+            >Contact us</a
+          >
+        </div>
+        <!-- Desktop Actions -->
+        <div class="hidden items-center space-x-4 lg:space-x-6 md:flex">
+          <a
+            href="#"
+            class="p-1 rounded-full hover:bg-gray-100 transition duration-200"
+          >
+            <img src="assets/images/cart.png" alt="cart" class="h-6 w-6" />
+          </a>
+          <a
+            href="login.html"
+            class="px-4 py-2 bg-green-600 text-white rounded-full font-medium shadow-md transition-all duration-300 transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 hover:bg-green-700 focus:ring-green-600 focus:ring-opacity-50 text-sm lg:text-base hover:shadow-lg lg:px-6"
+          >
+            Login
+          </a>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <!-- Menu Section -->
+      <section id="menu">
+        <!-- Menu Container -->
+        <div class="container mx-auto p-4 py-16">
+          <!-- Menu Title -->
+          <p class="text-center text-4xl font-bold text-primary mb-6">
+            Our popular menu
+          </p>
+          <!-- Catagories -->
+          <div
+            class="flex items-center md:justify-center overflow-x-auto pb-4 mb-6 gap-4 px-2 scrollbar-thin scrollbar-thumb-orange-500 scrollbar-track-gray-200"
+          >
+            <div class="flex gap-4 flex-nowrap">
+              <button
+                class="bg-primary text-white py-4 px-8 rounded-full whitespace-nowrap hover:bg-primary/90 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50"
+              >
+                All category
+              </button>
+              <button
+                class="bg-gray-50 text-primary py-4 px-8 rounded-full whitespace-nowrap hover:bg-gray-100 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-opacity-50"
+              >
+                Dinner
+              </button>
+              <button
+                class="bg-gray-50 text-primary py-4 px-8 rounded-full whitespace-nowrap hover:bg-gray-100 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-opacity-50"
+              >
+                Lunch
+              </button>
+              <button
+                class="bg-gray-50 text-primary py-4 px-8 rounded-full whitespace-nowrap hover:bg-gray-100 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-opacity-50"
+              >
+                Dessert
+              </button>
+              <button
+                class="bg-gray-50 text-primary py-4 px-8 rounded-full whitespace-nowrap hover:bg-gray-100 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-opacity-50"
+              >
+                Drink
+              </button>
+            </div>
+          </div>
+          <!-- Carts -->
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+            <!-- Cart Food 1 -->
+            <article
+              class="relative bg-gray-50 rounded-2xl shadow-lg p-4 text-center"
+            >
+              <img
+                src="assets/images/pasta.png"
+                alt="Spaghetti"
+                class="rounded-full mx-auto w-48 h-48 object-cover"
+              />
+              <h2 class="text-xl font-semibold mt-2 text-primary">Spaghetti</h2>
+              <div class="flex justify-center mt-2">
+                <span class="text-orange-500 font-bold text-xl">★★★★☆</span>
+              </div>
+              <p class="text-sm mt-2 text-gray-600 line-clamp-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="text-lg font-bold">$12.05</span>
+                <button
+                  class="bg-orange-500 text-white w-10 h-10 rounded-full flex items-center justify-center md:px-4 md:py-2 md:w-auto md:h-auto md:mt-2 hover:bg-orange-600 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50"
+                >
+                  <span class="hidden md:inline">Order now</span>
+                  <span class="md:hidden text-xl">+</span>
+                </button>
+              </div>
+            </article>
+            <!-- Cart Food 2 -->
+            <article
+              class="relative bg-gray-50 rounded-2xl shadow-lg p-4 text-center"
+            >
+              <img
+                src="assets/images/gnocchi.png"
+                alt="gnocchi"
+                class="rounded-full mx-auto w-48 h-48 object-cover"
+              />
+              <h2 class="text-xl font-semibold mt-2 text-primary">Gnocchi</h2>
+              <div class="flex justify-center mt-2">
+                <span class="text-orange-500 font-bold text-xl">★★★★☆</span>
+              </div>
+              <p class="text-sm mt-2 text-gray-600 line-clamp-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="text-lg font-bold">$12.05</span>
+                <button
+                  class="bg-orange-500 text-white w-10 h-10 rounded-full flex items-center justify-center md:px-4 md:py-2 md:w-auto md:h-auto md:mt-2 hover:bg-orange-600 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50"
+                >
+                  <span class="hidden md:inline">Order now</span>
+                  <span class="md:hidden text-xl">+</span>
+                </button>
+              </div>
+            </article>
+            <!-- Cart Food 3 -->
+            <article
+              class="relative bg-gray-50 rounded-2xl shadow-lg p-4 text-center"
+            >
+              <img
+                src="assets/images/rovioli.png"
+                alt="ravioli"
+                class="rounded-full mx-auto w-48 h-48"
+              />
+              <h2 class="text-xl font-semibold mt-2 text-primary">ravioli</h2>
+              <div class="flex justify-center mt-2">
+                <span class="text-orange-500 font-bold text-xl">★★★★☆</span>
+              </div>
+              <p class="text-sm mt-2 text-gray-600 line-clamp-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="text-lg font-bold">$12.05</span>
+                <button
+                  class="bg-orange-500 text-white w-10 h-10 rounded-full flex items-center justify-center md:px-4 md:py-2 md:w-auto md:h-auto md:mt-2 hover:bg-orange-600 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50"
+                >
+                  <span class="hidden md:inline">Order now</span>
+                  <span class="md:hidden text-xl">+</span>
+                </button>
+              </div>
+            </article>
+            <!-- Cart Food 4 -->
+            <article
+              class="relative bg-gray-50 rounded-2xl shadow-lg p-4 text-center"
+            >
+              <img
+                src="assets/images/penne-alla-vodak.png"
+                alt="Penne Alla Vodak"
+                class="rounded-full mx-auto w-48 h-48"
+              />
+              <h2 class="text-xl font-semibold mt-2 text-primary">
+                Penne Alla Vodak
+              </h2>
+              <div class="flex justify-center mt-2">
+                <span class="text-orange-500 font-bold text-xl">★★★★☆</span>
+              </div>
+              <p class="text-sm mt-2 text-gray-600 line-clamp-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="text-lg font-bold">$12.05</span>
+                <button
+                  class="bg-orange-500 text-white w-10 h-10 rounded-full flex items-center justify-center md:px-4 md:py-2 md:w-auto md:h-auto md:mt-2 hover:bg-orange-600 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50"
+                >
+                  <span class="hidden md:inline">Order now</span>
+                  <span class="md:hidden text-xl">+</span>
+                </button>
+              </div>
+            </article>
+            <!-- Cart Food 5 -->
+            <article
+              class="relative bg-gray-50 rounded-2xl shadow-lg p-4 text-center"
+            >
+              <img
+                src="assets/images/risoto.png"
+                alt="risoto"
+                class="rounded-full mx-auto w-48 h-48"
+              />
+              <h2 class="text-xl font-semibold mt-2 text-primary">Risoto</h2>
+              <div class="flex justify-center mt-2">
+                <span class="text-orange-500 font-bold text-xl">★★★★☆</span>
+              </div>
+              <p class="text-sm mt-2 text-gray-600 line-clamp-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="text-lg font-bold">$12.05</span>
+                <button
+                  class="bg-orange-500 text-white w-10 h-10 rounded-full flex items-center justify-center md:px-4 md:py-2 md:w-auto md:h-auto md:mt-2 hover:bg-orange-600 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50"
+                >
+                  <span class="hidden md:inline">Order now</span>
+                  <span class="md:hidden text-xl">+</span>
+                </button>
+              </div>
+            </article>
+            <!-- Cart Food 6 -->
+            <article
+              class="relative bg-gray-50 rounded-2xl shadow-lg p-4 text-center"
+            >
+              <img
+                src="assets/images/splitza-signature.png"
+                alt="splitza signature"
+                class="rounded-full mx-auto w-48 h-48"
+              />
+              <h2 class="text-xl font-semibold mt-2 text-primary">
+                Splitza Signature
+              </h2>
+              <div class="flex justify-center mt-2">
+                <span class="text-orange-500 font-bold text-xl">★★★★☆</span>
+              </div>
+              <p class="text-sm mt-2 text-gray-600 line-clamp-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="text-lg font-bold">$12.05</span>
+                <button
+                  class="bg-orange-500 text-white w-10 h-10 rounded-full flex items-center justify-center md:px-4 md:py-2 md:w-auto md:h-auto md:mt-2 hover:bg-orange-600 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50"
+                >
+                  <span class="hidden md:inline">Order now</span>
+                  <span class="md:hidden text-xl">+</span>
+                </button>
+              </div>
+            </article>
+          </div>
+          <!-- Previous/Next Buttons  -->
+          <div
+            class="hidden items-center py-8 md:flex md:justify-center md:space-x-4"
+          >
+            <!-- Left Button -->
+            <button
+              class="hover:scale-105 transition duration-300 focus:outline-none"
+            >
+              <i
+                class="fa fa-chevron-left bg-primary p-4 rounded-lg text-white hover:bg-primary/90 focus:ring-2 focus:ring-primary focus:ring-opacity-50"
+                aria-hidden="true"
+              ></i>
+            </button>
+            <button
+              class="py-4 px-5 font-bold text-orange-500 bg-orange-50 rounded-lg hover:bg-orange-100 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50"
+            >
+              1
+            </button>
+            <button
+              class="py-4 px-5 font-bold text-orange-500 bg-orange-50 rounded-lg hover:bg-orange-100 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50"
+            >
+              2
+            </button>
+            <button
+              class="py-4 px-5 font-bold text-orange-500 bg-orange-50 rounded-lg hover:bg-orange-100 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50"
+            >
+              3
+            </button>
+            <button class="px-4 font-bold rounded-lg">
+              <i class="fa fa-lg fa-ellipsis-h" aria-hidden="true"></i>
+            </button>
+            <!-- Right Button -->
+            <button
+              class="hover:scale-105 transition duration-300 focus:outline-none"
+            >
+              <i
+                class="fa fa-chevron-right bg-primary p-4 rounded-lg text-white hover:bg-primary/90 focus:ring-2 focus:ring-primary focus:ring-opacity-50"
+                aria-hidden="true"
+              ></i>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer  -->
+    <footer class="bg-primary text-zinc-200">
+      <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 py-12">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10"
+        >
+          <!-- Logo + Description + Social -->
+          <div class="space-y-4 sm:space-y-6">
+            <div class="flex text-lg font-semibold items-center space-x-2">
+              <span
+                class="bg-orange-500 rounded-full px-3 py-1 text-xs font-bold"
+                >D</span
+              >
+              <span>Delizi<span class="text-orange-500">oso</span></span>
+            </div>
+            <p class="text-sm leading-relaxed">
+              Viverra gravida morbi egestas facilisis tortor netus non duis
+              tempor.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#">
+                <img
+                  src="assets/images/x.png"
+                  alt="X"
+                  class="w-6 h-6 sm:w-8 sm:h-8 object-contain"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="assets/images/facebook.png"
+                  alt="Facebook"
+                  class="w-6 h-6 sm:w-8 sm:h-8 object-contain"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="assets/images/instagram.png"
+                  alt="Instagram"
+                  class="w-6 h-6 sm:w-8 sm:h-8 object-contain"
+                />
+              </a>
+            </div>
+          </div>
+          <!-- Page Links -->
+          <div class="space-y-3 sm:space-y-4">
+            <h4 class="text-lg font-bold text-orange-400">Pages</h4>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a
+                  href="index.html"
+                  class="hover:text-orange-500 transition-colors"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="menu.html"
+                  class="hover:text-orange-500 transition-colors"
+                  >Menu</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Information -->
+          <div class="space-y-3 sm:space-y-4">
+            <h4 class="text-lg font-bold text-orange-400">Information</h4>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a
+                  href="about-us.html"
+                  class="hover:text-orange-500 transition-colors"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact-us.html"
+                  class="hover:text-orange-500 transition-colors"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-orange-500 transition-colors"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-orange-500 transition-colors"
+                  >Terms of Service</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-orange-500 transition-colors"
+                  >FAQ</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Contact -->
+          <div class="space-y-3 sm:space-y-4">
+            <h4 class="text-lg font-bold text-orange-400">Get in Touch</h4>
+            <address class="text-sm not-italic">
+              3247 Johnson Ave, Bronx, NY 10463, Amerika Serikat
+            </address>
+            <a
+              href="mailto:hamzehesmaeili.official@gmail.com"
+              class="block hover:text-orange-500 text-sm transition-colors"
+            >
+              hamzehesmaeili.official@gmail.com
+            </a>
+            <a
+              href="tel:+12345678901"
+              class="block hover:text-orange-500 text-sm transition-colors"
+            >
+              +123 4567 8901
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Script -->
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

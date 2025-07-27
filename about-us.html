@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="assets/dist/output.css" rel="stylesheet" />
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.png"
+      type="image/png"
+    />
+    <!-- Font Awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Title -->
+    <title>Restaurant | About us</title>
+  </head>
+  <body class="font-poppins">
+    <!-- Nav Wrapper -->
+    <nav id="nav-bar" class="sticky top-0 z-50 bg-white shadow-sm">
+      <div
+        class="flex max-w-7xl items-center justify-between mx-auto px-4 py-4"
+      >
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-1 md:gap-2">
+          <span
+            class="bg-orange-500 text-white font-bold rounded-full px-3 py-1 text-lg"
+            >D</span
+          >
+          <span class="font-bold text-xl text-primary md:text-2xl">
+            Delizi<span class="text-orange-500">oso</span>
+          </span>
+        </a>
+        <!-- Mobile Actions (Cart + Hamburger) -->
+        <div class="flex items-center space-x-4 md:hidden">
+          <img src="assets/images/cart.png" alt="cart" class="h-6 w-6" />
+
+          <!-- Hamburger Button -->
+          <button
+            id="menu-btn"
+            class="block hamburger mt-2.5 lg:hidden focus:outline-none"
+            type="button"
+          >
+            <span class="hamburger-top"></span>
+            <span class="hamburger-middle"></span>
+            <span class="hamburger-bottom"></span>
+          </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div
+          id="menu"
+          class="absolute hidden left-0 right-0 top-16 z-[100] bg-white/90 backdrop-blur-sm h-screen w-full overflow-y-auto transition-all duration-500 ease-in-out shadow-lg"
+        >
+          <div class="container mx-auto px-4 py-8">
+            <div
+              class="flex flex-col items-center justify-center w-full space-y-4 font-bold"
+            >
+              <!-- Main Navigation Links -->
+              <a
+                href="index.html"
+                class="group relative w-full max-w-xs text-center transition duration-300 py-3 px-4 hover:bg-orange-50 rounded-lg"
+              >
+                <span
+                  class="text-gray-800 group-hover:text-orange-500 transition-colors duration-300 text-lg"
+                  >Home</span
+                >
+                <span
+                  class="absolute left-1/2 -translate-x-1/2 bottom-1.5 w-0 h-1 bg-orange-500 rounded-full transition-all duration-500 group-hover:w-3/4"
+                ></span>
+              </a>
+
+              <a
+                href="menu.html"
+                class="group relative w-full max-w-xs text-center transition duration-300 py-3 px-4 hover:bg-orange-50 rounded-lg"
+              >
+                <span
+                  class="text-gray-800 group-hover:text-orange-500 transition-colors duration-300 text-lg"
+                  >Menu</span
+                >
+                <span
+                  class="absolute left-1/2 -translate-x-1/2 bottom-1.5 w-0 h-1 bg-orange-500 rounded-full transition-all duration-500 group-hover:w-3/4"
+                ></span>
+              </a>
+
+              <a
+                href="about-us.html"
+                class="group relative w-full max-w-xs text-center transition duration-300 py-3 px-4 hover:bg-orange-50 rounded-lg"
+              >
+                <span
+                  class="text-gray-800 group-hover:text-orange-500 transition-colors duration-300 text-lg"
+                  >About Us</span
+                >
+                <span
+                  class="absolute left-1/2 -translate-x-1/2 bottom-1.5 w-0 h-1 bg-orange-500 rounded-full transition-all duration-500 group-hover:w-3/4"
+                ></span>
+              </a>
+
+              <a
+                href="contact-us.html"
+                class="group relative w-full max-w-xs text-center transition duration-300 py-3 px-4 hover:bg-orange-50 rounded-lg"
+              >
+                <span
+                  class="text-gray-800 group-hover:text-orange-500 transition-colors duration-300 text-lg"
+                  >Contact Us</span
+                >
+                <span
+                  class="absolute left-1/2 -translate-x-1/2 bottom-1.5 w-0 h-1 bg-orange-500 rounded-full transition-all duration-500 group-hover:w-3/4"
+                ></span>
+              </a>
+
+              <!-- Divider with better styling -->
+              <div class="w-full max-w-xs py-2">
+                <div class="border-t border-gray-200 my-2"></div>
+              </div>
+
+              <!-- Auth Links -->
+              <a
+                href="signup.html"
+                class="group relative w-full max-w-xs text-center transition duration-300 py-3 px-4 hover:bg-orange-50 rounded-lg"
+              >
+                <span
+                  class="text-gray-800 group-hover:text-orange-500 transition-colors duration-300 text-lg"
+                  >Sign Up</span
+                >
+                <span
+                  class="absolute left-1/2 -translate-x-1/2 bottom-1.5 w-0 h-1 bg-orange-500 rounded-full transition-all duration-500 group-hover:w-3/4"
+                ></span>
+              </a>
+
+              <a
+                href="login.html"
+                class="group relative w-full max-w-xs text-center py-3 px-4 bg-orange-500 text-white hover:bg-orange-600 rounded-lg shadow-md hover:shadow-orange-200 transition-all duration-300"
+              >
+                <span
+                  class="text-white group-hover:text-white transition-colors duration-300 text-lg"
+                  >Login</span
+                >
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Desktop Menu -->
+        <div
+          class="hidden items-center text-primary space-x-3 lg:space-x-6 md:flex"
+        >
+          <a href="index.html" class="hover:text-orange-500 transition">Home</a>
+          <a href="menu.html" class="hover:text-orange-500 transition">Menu</a>
+          <a href="about-us.html" class="text-orange-500">About us</a>
+          <a href="contact-us.html" class="hover:text-orange-500 transition"
+            >Contact us</a
+          >
+        </div>
+        <!-- Desktop Actions -->
+        <div class="hidden items-center space-x-4 lg:space-x-6 md:flex">
+          <a
+            href="#"
+            class="p-1 rounded-full hover:bg-gray-100 transition duration-200"
+          >
+            <img src="assets/images/cart.png" alt="cart" class="h-6 w-6" />
+          </a>
+          <a
+            href="login.html"
+            class="px-4 py-2 bg-green-600 text-white rounded-full font-medium shadow-md transition-all duration-300 transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 hover:bg-green-700 focus:ring-green-600 focus:ring-opacity-50 text-sm lg:text-base hover:shadow-lg lg:px-6"
+          >
+            Login
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- Main  -->
+    <main>
+      <!-- Restaurant Introduction Section -->
+      <section class="container mx-auto px-4 py-16">
+        <!-- Introduction Container  -->
+        <div class="flex flex-col items-center gap-10 md:flex-row md:gap-16">
+          <!-- Image Container & Glow Effect -->
+          <div class="relative">
+            <!-- Glow Effect Background -->
+            <div
+              class="absolute -inset-4 bg-orange-500 rounded-full blur-md opacity-30 z-0"
+            ></div>
+            <!-- Restaurant Image -->
+            <img
+              src="assets/images/restaurant-1.png"
+              alt="Restaurant"
+              class="relative w-[400px] max-w-7xl z-10 rounded-full border-8 border-white md:w-[450px]"
+            />
+          </div>
+
+          <!-- Text content -->
+          <div class="space-y-6 text-center md:text-left md:w-1/2">
+            <!-- Section heading -->
+            <p class="text-4xl font-semibold">
+              <span class="text-orange-500">Our </span>Restaurant
+            </p>
+            <!-- Description paragraph -->
+            <p class="text-gray-700 leading-relaxed">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Introduction Section -->
+      <section class="container mx-auto px-4 py-16">
+        <!-- Introduction Container  -->
+        <div
+          class="flex flex-col-reverse items-center gap-10 md:flex-row md:gap-16"
+        >
+          <!-- Text Content -->
+          <div class="space-y-6 text-center md:text-left md:w-1/2">
+            <!-- Description Paragraph -->
+            <p class="text-gray-700 leading-relaxed">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse.
+            </p>
+          </div>
+
+          <!-- Image container with glow effect -->
+          <div class="relative">
+            <!-- Glow effect background -->
+            <div
+              class="absolute -inset-4 bg-orange-500 rounded-full blur-md opacity-30 z-0"
+            ></div>
+            <!-- Restaurant image -->
+            <img
+              src="assets/images/restaurant-2.png"
+              alt="Restaurant"
+              class="relative w-[400px] max-w-7xl z-10 rounded-full border-8 border-white md:w-[450px]"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- Owner Section -->
+      <section class="container mx-auto py-16">
+        <!-- Owner Container -->
+        <div
+          class="flex flex-col max-w-7xl items-center bg-white gap-36 md:flex-row"
+        >
+          <!-- Image for Desktop -->
+          <div class="hidden w-full md:block md:w-1/2">
+            <img
+              src="assets/images/owner.png"
+              alt="Owner"
+              class="rounded-lg shadow-lg object-cover w-full"
+            />
+          </div>
+
+          <!-- Text + Mobile Image -->
+          <div class="w-full space-y-8 py-8 text-center md:w-1/2 md:py-16">
+            <!-- Title -->
+            <h2 class="text-4xl md:text-6xl font-bold">
+              <span class="text-orange-500">Owner</span> &
+              <span class="text-gray-800">Executive Chef</span>
+            </h2>
+
+            <!-- Name -->
+            <h3 class="text-lg font-semibold text-gray-900">Ismail Marzuki</h3>
+
+            <!-- Image for Mobile -->
+            <div class="block md:hidden">
+              <img
+                src="assets/images/owner.png"
+                alt="Owner"
+                class="rounded-lg shadow-lg object-cover mx-auto w-full max-w-xs"
+              />
+            </div>
+
+            <!-- Quote -->
+            <div class="text-gray-600 italic relative pl-6">
+              <span
+                class="absolute left-0 top-0 text-orange-200 text-3xl leading-none"
+                >“</span
+              >
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <span
+                class="block text-right text-orange-200 text-3xl leading-none"
+                >”</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer  -->
+    <footer class="bg-primary text-zinc-200">
+      <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 py-12">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10"
+        >
+          <!-- Logo + Description + Social -->
+          <div class="space-y-4 sm:space-y-6">
+            <div class="flex text-lg font-semibold items-center space-x-2">
+              <span
+                class="bg-orange-500 rounded-full px-3 py-1 text-xs font-bold"
+                >D</span
+              >
+              <span>Delizi<span class="text-orange-500">oso</span></span>
+            </div>
+            <p class="text-sm leading-relaxed">
+              Viverra gravida morbi egestas facilisis tortor netus non duis
+              tempor.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#">
+                <img
+                  src="assets/images/x.png"
+                  alt="X"
+                  class="w-6 h-6 sm:w-8 sm:h-8 object-contain"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="assets/images/facebook.png"
+                  alt="Facebook"
+                  class="w-6 h-6 sm:w-8 sm:h-8 object-contain"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="assets/images/instagram.png"
+                  alt="Instagram"
+                  class="w-6 h-6 sm:w-8 sm:h-8 object-contain"
+                />
+              </a>
+            </div>
+          </div>
+          <!-- Page Links -->
+          <div class="space-y-3 sm:space-y-4">
+            <h4 class="text-lg font-bold text-orange-400">Pages</h4>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a
+                  href="index.html"
+                  class="hover:text-orange-500 transition-colors"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="menu.html"
+                  class="hover:text-orange-500 transition-colors"
+                  >Menu</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Information -->
+          <div class="space-y-3 sm:space-y-4">
+            <h4 class="text-lg font-bold text-orange-400">Information</h4>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a
+                  href="about-us.html"
+                  class="hover:text-orange-500 transition-colors"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact-us.html"
+                  class="hover:text-orange-500 transition-colors"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-orange-500 transition-colors"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-orange-500 transition-colors"
+                  >Terms of Service</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-orange-500 transition-colors"
+                  >FAQ</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Contact -->
+          <div class="space-y-3 sm:space-y-4">
+            <h4 class="text-lg font-bold text-orange-400">Get in Touch</h4>
+            <address class="text-sm not-italic">
+              3247 Johnson Ave, Bronx, NY 10463, Amerika Serikat
+            </address>
+            <a
+              href="mailto:hamzehesmaeili.official@gmail.com"
+              class="block hover:text-orange-500 text-sm transition-colors"
+            >
+              hamzehesmaeili.official@gmail.com
+            </a>
+            <a
+              href="tel:+12345678901"
+              class="block hover:text-orange-500 text-sm transition-colors"
+            >
+              +123 4567 8901
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Script -->
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
